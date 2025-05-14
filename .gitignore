@@ -1,4 +1,5 @@
 *.env
 *.log
 
+#Ignore this folder since it is installed manually rather than install via TPM
 tmux/plugins/catppuccin/
