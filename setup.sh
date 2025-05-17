@@ -76,7 +76,6 @@ if command -v apt &>/dev/null; then
     curl \
     wget \
     zsh \
-    fuse2 \
     neofetch \
     libfuse2 \
     tmux \
@@ -87,7 +86,6 @@ elif command -v dnf &>/dev/null; then
     curl \
     wget \
     zsh \
-    fuse2 \
     neofetch \
     libfuse2 \
     tmux \
