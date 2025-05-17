@@ -146,7 +146,5 @@ source ~/.bashrc
 echo "Switching from ZSH..."
 chsh -s $(which zsh)
 
-source ~/.zshrc
-
 echo "Installing OhMyZsh..."
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
