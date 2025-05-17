@@ -137,11 +137,15 @@ echo 'export PATH="$PATH:/opt/nvim/"' >> ~/.bashrc
 echo "Now you can officially say Neovim BTW"
 
 echo "Putting all $PATH into ~/.zshrc..."
+echo 'export NVIM_DIR="$HOME/.nvm"' >> ~/.zshrc
 echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> ~/.zshrc
 echo 'export PATH="$PATH:/opt/nvim/"' >> ~/.zshrc
 
 source ~/.bashrc
 source ~/.zshrc
+
+echo "Switching from ZSH..."
+chsh -s $(which zsh)
 
 echo "Installing OhMyZsh..."
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
