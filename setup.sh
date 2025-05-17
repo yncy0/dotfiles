@@ -128,7 +128,7 @@ chmod u+x nvim-linux-x86_64.appimage
 ./nvim-linux-x86_64.appimage
 
 echo "Exposing Neovim Globally..."
-mkdir -p /opt/nvim
+sudo mkdir -p /opt/nvim
 sudo mv nvim-linux-x86_64.appimage /opt/nvim/nvim
 
 echo "Sourcing Neovim..."
