@@ -2,7 +2,7 @@
 
 Clone this repository:
 ```
-git clone https://github.com/yourusername/yourconfigrepo.git ~/.config
+git clone https://github.com/Yncy0/wsl-dev-setup.git  ~/.config
 ```
 
 Run the script:
