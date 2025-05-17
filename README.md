@@ -1,3 +1,11 @@
-## A WSL that you can run via Linux Terminal
+## My personal development setup in WSL
 
-WIP
+Clone this repository:
+```
+git clone https://github.com/yourusername/yourconfigrepo.git ~/.config
+```
+
+Run the script:
+```
+cd ~/.config && ./setup.sh
+```
