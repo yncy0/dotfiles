@@ -140,9 +140,8 @@ echo "Putting all $PATH into ~/.zshrc..."
 echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> ~/.zshrc
 echo 'export PATH="$PATH:/opt/nvim/"' >> ~/.zshrc
 
+source ~/.bashrc
+source ~/.zshrc
+
 echo "Installing OhMyZsh..."
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-echo "You are set and good to go"
-echo "If you want to change to zsh"
-echo "Just run: chsh -s $(which zsh)"
