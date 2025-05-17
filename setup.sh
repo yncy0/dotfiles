@@ -142,10 +142,11 @@ echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> ~/.zshrc
 echo 'export PATH="$PATH:/opt/nvim/"' >> ~/.zshrc
 
 source ~/.bashrc
-source ~/.zshrc
 
 echo "Switching from ZSH..."
 chsh -s $(which zsh)
+
+source ~/.zshrc
 
 echo "Installing OhMyZsh..."
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
