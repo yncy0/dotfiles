@@ -7,5 +7,5 @@ git clone https://github.com/yourusername/yourconfigrepo.git ~/.config
 
 Run the script:
 ```
-cd ~/.config && ./setup.sh
+cd ~/.config && chmod +x setup.sh && ./setup.sh
 ```
