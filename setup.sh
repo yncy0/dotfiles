@@ -104,8 +104,8 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 
 echo "Sourcing NVM..."
 echo 'export NVIM_DIR="$HOME/.nvm"' >> ~/.bashrc
-echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"'
-echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"'
+echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> ~/.bashrc
+echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"' >> ~/.bashrc
 \. "$HOME/.nvm/nvm.sh"
 
 echo "Installing NVM..."
@@ -131,15 +131,20 @@ chmod u+x nvim-linux-x86_64.appimage
 
 echo "Exposing Neovim Globally..."
 mkdir -p /opt/nvim
-mv nvim-linux-x86_64.appimage /opt/nvim/nvim
+sudo mv nvim-linux-x86_64.appimage /opt/nvim/nvim
 
-echo "Sourcing Neovim"
-echo '"export PATH="$PATH:/opt/nvim/"' >> ~/.bashrc
+echo "Sourcing Neovim..."
+echo 'export PATH="$PATH:/opt/nvim/"' >> ~/.bashrc
 
 echo "Now you can officially say Neovim BTW"
 
 echo "Installing OhMyZsh..."
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-echo "You are set and good to go"
+echo "Putting all $PATH into ~/.zshrc..."
+echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> ~/.zshrc
+echo 'export PATH="$PATH:/opt/nvim/"' >> ~/.zshrc
 
+echo "You are set and good to go"
+echo "If you want to change to zsh"
+echo "Just run: chsh -s $(which zsh)"
