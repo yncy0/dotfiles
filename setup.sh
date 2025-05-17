@@ -143,7 +143,7 @@ echo 'export PATH="$PATH:/opt/nvim/"' >> ~/.zshrc
 
 source ~/.bashrc
 
-echo "Switching from ZSH..."
+echo "Switching to ZSH..."
 chsh -s $(which zsh)
 
 echo "Installing OhMyZsh..."
