@@ -21,3 +21,7 @@ cd ~/.config && chmod +x setup.sh && ./setup.sh
 - ✅ zsh && oh-my-zsh
 - ✅ neofetch || fastfetch
 - ✅ Neovim
+
+<br>
+
+*Please if you have problems, contact me on my GitHub account: Yncy0, or open an issue on this repository. Thanks!*
