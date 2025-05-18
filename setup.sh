@@ -86,7 +86,7 @@ elif command -v dnf &>/dev/null; then
     curl \
     wget \
     zsh \
-    neofetch \
+    fastfetch \
     fuse \
     tmux \
     git
