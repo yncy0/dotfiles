@@ -148,8 +148,8 @@ git clone -b v2.1.3 https://github.com/catppuccin/tmux.git ~/.config/tmux/plugin
 
 source ~/.bashrc
 
-echo "Switching to ZSH..."
-chsh -s $(which zsh)
+# echo "Switching to ZSH..."
+# chsh -s $(which zsh)
 
 echo "Installing OhMyZsh..."
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
