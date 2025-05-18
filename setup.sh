@@ -87,7 +87,7 @@ elif command -v dnf &>/dev/null; then
     wget \
     zsh \
     neofetch \
-    libfuse2 \
+    fuse \
     tmux \
     git
 else
