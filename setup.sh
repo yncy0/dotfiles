@@ -141,6 +141,11 @@ echo 'export NVIM_DIR="$HOME/.nvm"' >> ~/.zshrc
 echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> ~/.zshrc
 echo 'export PATH="$PATH:/opt/nvim/"' >> ~/.zshrc
 
+echo "Adding tmux configurtion..."
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+mkdir -p ~/.config/tmux/plugins/catppuccin
+git clone -b v2.1.3 https://github.com/catppuccin/tmux.git ~/.config/tmux/plugins/catppuccin/tmux
+
 source ~/.bashrc
 
 echo "Switching to ZSH..."
