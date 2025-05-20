@@ -6,7 +6,7 @@
 
 Clone this repository:
 ```
-[git clone https://github.com/Yncy0/wsl-dev-setup.git](https://github.com/Yncy0/linux-dev-setup.git) ~/.config
+git clone https://github.com/Yncy0/wsl-dev-setup.git ~/.config
 ```
 
 Run the script:
