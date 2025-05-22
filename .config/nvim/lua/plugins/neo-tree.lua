@@ -6,8 +6,17 @@ return {
     "MunifTanjim/nui.nvim",
   },
   lazy = false,
-  config = function ()
+  config = function()
     vim.keymap.set('n', '<C-n>', ':Neotree filesystem reveal left<CR>', {})
-  end
+  end,
+  opts = {
+    filesystem = {
+      filtered_items = {
+        visible = true,
+        hide_dotfiles = false,
+        hide_gitignored = false,
+      }
+    }
+  }
 }
 
