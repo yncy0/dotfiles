@@ -38,14 +38,22 @@ install_oh_my_zsh() {
 }
 
 install_node_packages() {
+  echo -e "  ███╗   ██╗ ██████╗ ██████╗ ███████╗     ██╗███████╗"
+  echo -e "  ████╗  ██║██╔═══██╗██╔══██╗██╔════╝     ██║██╔════╝"
+  echo -e "  ██╔██╗ ██║██║   ██║██║  ██║█████╗       ██║███████╗"
+  echo -e "  ██║╚██╗██║██║   ██║██║  ██║██╔══╝  ██   ██║╚════██║"
+  echo -e "  ██║ ╚████║╚██████╔╝██████╔╝███████╗╚█████╔╝███████║"
+  echo -e "  ╚═╝  ╚═══╝ ╚═════╝ ╚═════╝ ╚══════╝ ╚════╝ ╚══════╝"
+
+
   echo "Installing Node packages..."
   echo "Installing NVM..."
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 
   echo "Sourcing NVM..."
- # echo 'export NVIM_DIR="$HOME/.nvm"' >> ~/.zshrc
- # echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> ~/.zshrc
- # echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"' >> ~/.zshrc
+  # echo 'export NVIM_DIR="$HOME/.nvm"' >> ~/.zshrc
+  # echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> ~/.zshrc
+  # echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"' >> ~/.zshrc
   \. "$HOME/.nvm/nvm.sh"
 
   echo "Installing NVM..."
@@ -66,6 +74,12 @@ install_node_packages() {
 }
 
 install_neovim() {
+  echo -e "███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗"
+  echo -e "████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║"
+  echo -e "██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║"
+  echo -e "██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║"
+  echo -e "██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║"
+  echo -e "╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝"
 
   echo "Installing Neovim..."
   curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage
@@ -89,6 +103,12 @@ install_neovim() {
 # echo 'export PATH="$PATH:/opt/nvim/"' >> ~/.zshrc
 
 install_tmux_config() {
+  echo -e "████████╗███╗   ███╗██╗   ██╗██╗  ██╗"
+  echo -e "╚══██╔══╝████╗ ████║██║   ██║╚██╗██╔╝"
+  echo -e "   ██║   ██╔████╔██║██║   ██║ ╚███╔╝ "
+  echo -e "   ██║   ██║╚██╔╝██║██║   ██║ ██╔██╗ "
+  echo -e "   ██║   ██║ ╚═╝ ██║╚██████╔╝██╔╝ ██╗"
+  echo -e "   ╚═╝   ╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═╝ " 
 
   echo "Adding tmux configurtion..."
   git clone https://github.com/tmux-plugins/tpm "$REPO_DIR/.config/tmux/plugins/tpm"
