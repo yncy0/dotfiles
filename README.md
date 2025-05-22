@@ -6,12 +6,12 @@
 
 Clone this repository:
 ```
-git clone https://github.com/Yncy0/wsl-dev-setup.git ~/.config
+git clone https://github.com/Yncy0/wsl-dev-setup.git ~/.linux-dev-setup
 ```
 
 Run the script:
 ```
-cd ~/.config && chmod +x setup.sh && ./setup.sh
+cd ~/.linux-dev-setup && chmod +x setup.sh && ./setup.sh
 ```
 
 ## Project Includes:
