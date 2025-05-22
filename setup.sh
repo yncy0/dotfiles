@@ -111,9 +111,21 @@ install_tmux_config() {
   echo -e "   ╚═╝   ╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═╝ " 
 
   echo "Adding tmux configurtion..."
-  git clone https://github.com/tmux-plugins/tpm "$REPO_DIR/.config/tmux/plugins/tpm"
-  mkdir -p ~/.config/tmux/plugins/catppuccin
-  git clone -b v2.1.3 https://github.com/catppuccin/tmux.git "$REPO_DIR/.config/tmux/plugins/catppuccin/tmux"
+  if [ ! -d "$REPO_DIR/.config/tmux/plugins/tpm"]; then
+    git clone https://github.com/tmux-plugins/tpm "$REPO_DIR/.config/tmux/plugins/tpm"
+  else 
+    echo "TPM already exist, skipping"
+  fi
+
+  if [ ! -d "$REPO_DIR/.config/tmux/plugins/catppuccin/tmux"]; then
+    mkdir -p ~/.config/tmux/plugins/catppuccin
+    git clone -b v2.1.3 https://github.com/catppuccin/tmux.git "$REPO_DIR/.config/tmux/plugins/catppuccin/tmux"
+  else
+    echo "catppuccin already exist, skipping"
+  fi
+
+  ln -sfn "$REPO_DIR/.config/tmux" "$HOME/.config/tmux"
+
 
 }
 
