@@ -9,6 +9,11 @@ Clone this repository:
 git clone https://github.com/Yncy0/wsl-dev-setup.git ~/.linux-dev-setup
 ```
 
+If using SSH:
+```
+git clone git@github.com:Yncy0/linux-dev-setup.git ~/.linux-dev-setup
+```
+
 Run the script:
 ```
 cd ~/.linux-dev-setup && chmod +x setup.sh && ./setup.sh
