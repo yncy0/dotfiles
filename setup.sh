@@ -13,29 +13,37 @@ install_packages() {
       wget \
       neofetch \
       libfuse2 \
-      tmux \
-    elif command -v dnf &>/dev/null; then
-      echo "Fedora-based system detected. Installing dependencies using dnf..."
-      sudo dnf install -y \
-        curl \
-        wget \
-        fastfetch \
-        fuse \
-        tmux \
-      else
-        echo "Unsupported package manager. Please install dependencies manually."
-        exit 1
+      tmux
+  elif command -v dnf &>/dev/null; then
+    echo "Fedora-based system detected. Installing dependencies using dnf..."
+    sudo dnf install -y \
+      curl \
+      wget \
+      fastfetch \
+      fuse \
+      tmux
+  else
+    echo "Unsupported package manager. Please install dependencies manually."
+    exit 1
   fi
 }
 
 install_oh_my_zsh() {
   if [ ! -d "$HOME/.oh-my-zsh" ]; then
     echo "Installing OhMyZsh..."
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+    # Install OhMyZsh non-interactively
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+
+    if [ $? -ne 0 ]; then
+      echo "Failed to install OhMyZsh. Exiting."
+      exit 1
+    fi
   else
     echo "OhMyZsh is already installed."
   fi
 }
+
 
 install_node_packages() {
   echo -e "  ███╗   ██╗ ██████╗ ██████╗ ███████╗     ██╗███████╗"
@@ -51,9 +59,6 @@ install_node_packages() {
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 
   echo "Sourcing NVM..."
-  # echo 'export NVIM_DIR="$HOME/.nvm"' >> ~/.zshrc
-  # echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> ~/.zshrc
-  # echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"' >> ~/.zshrc
   \. "$HOME/.nvm/nvm.sh"
 
   echo "Installing NVM..."
@@ -91,16 +96,11 @@ install_neovim() {
   sudo mv nvim-linux-x86_64.appimage /opt/nvim/nvim
 
   echo "Sourcing Neovim..."
-  # echo 'export PATH="$PATH:/opt/nvim/"' >> ~/.zshrc
 
   echo "Now you can officially say Neovim BTW"
 
 }
 
-# echo "Putting all $PATH into ~/.zshrc..."
-# echo 'export NVIM_DIR="$HOME/.nvm"' >> ~/.zshrc
-# echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> ~/.zshrc
-# echo 'export PATH="$PATH:/opt/nvim/"' >> ~/.zshrc
 
 install_tmux_config() {
   echo -e "████████╗███╗   ███╗██╗   ██╗██╗  ██╗"
@@ -113,7 +113,7 @@ install_tmux_config() {
   echo "Adding tmux configurtion..."
   git clone https://github.com/tmux-plugins/tpm "$REPO_DIR/.config/tmux/plugins/tpm"
   mkdir -p ~/.config/tmux/plugins/catppuccin
-  git clone -b v2.1.3 https://github.com/catppuccin/tmux.git "$REPOS_DIR/.config/tmux/plugins/catppuccin/tmux"
+  git clone -b v2.1.3 https://github.com/catppuccin/tmux.git "$REPO_DIR/.config/tmux/plugins/catppuccin/tmux"
 
 }
 
@@ -129,11 +129,11 @@ syslink() {
 
 main() {
   install_packages
-  install_oh_my_zsh
   install_node_packages
   install_neovim
   install_tmux_config
   syslink
+  install_oh_my_zsh
 }
 
 main
