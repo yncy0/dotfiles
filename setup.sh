@@ -13,7 +13,8 @@ install_packages() {
       wget \
       neofetch \
       libfuse2 \
-      tmux
+      tmux \
+      zsh
   elif command -v dnf &>/dev/null; then
     echo "Fedora-based system detected. Installing dependencies using dnf..."
     sudo dnf install -y \
@@ -21,7 +22,8 @@ install_packages() {
       wget \
       fastfetch \
       fuse \
-      tmux
+      tmux \
+      zsh
   else
     echo "Unsupported package manager. Please install dependencies manually."
     exit 1
