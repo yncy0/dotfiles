@@ -1,8 +1,16 @@
 # My personal development setup in Linux or in WSL
 
-**This setup only includes** `apt` **and** `dnf` **packages,** you can customize the `setup.sh` script to your liking by creating fork repo
+**This setup only includes** `apt` **and** `dnf` **packages** 
 
 <br>
+
+## ⚠️ WARNING
+
+Please fork this repository if you want to customize it on your own
+
+<br>
+
+## Installation
 
 Clone this repository:
 ```
@@ -18,6 +26,24 @@ Run the script:
 ```
 cd ~/.linux-dev-setup && chmod +x setup.sh && ./setup.sh
 ```
+
+## ZSH
+
+If you wanted zsh to be your default shell, after installation run:
+
+```
+source ~/.zshrc
+chsh -s $(which zsh)
+```
+
+If oh-my-zsh not showing, run this line:
+```
+zsh
+```
+
+⚠️ You might want to restart your terminal to apply the changes
+
+<br>
 
 ## Project Includes:
 - ✅ npm
