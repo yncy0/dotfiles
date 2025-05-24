@@ -35,7 +35,7 @@ install_oh_my_zsh() {
     echo "Installing OhMyZsh..."
 
     # Install OhMyZsh non-interactively
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" 
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
     if [ $? -ne 0 ]; then
       echo "Failed to install OhMyZsh. Exiting."
@@ -113,39 +113,38 @@ install_tmux_config() {
   echo -e "   ╚═╝   ╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═╝ " 
 
   echo "Adding tmux configurtion..."
-  # if [ ! -d "$REPO_DIR/.config/tmux/plugins/tpm"]; then
-  #   git clone https://github.com/tmux-plugins/tpm "$REPO_DIR/.config/tmux/plugins/tpm"
-  # else 
-  #   echo "TPM already exist, skipping"
-  # fi
+  if [ ! -d "$REPO_DIR/.config/tmux/plugins/tpm" ]; then
+    git clone https://github.com/tmux-plugins/tpm "$REPO_DIR/.config/tmux/plugins/tpm"
+  else 
+    echo "TPM already exist, skipping"
+  fi
 
-  # if [ ! -d "$REPO_DIR/.config/tmux/plugins/catppuccin/tmux"]; then
-  #   mkdir -p ~/.config/tmux/plugins/catppuccin
-  #   git clone -b v2.1.3 https://github.com/catppuccin/tmux.git "$REPO_DIR/.config/tmux/plugins/catppuccin/tmux"
-  # else
-  #   echo "catppuccin already exist, skipping"
-  # fi
+  if [ ! -d "$REPO_DIR/.config/tmux/plugins/catppuccin/tmux" ]; then
+    mkdir -p ~/.config/tmux/plugins/catppuccin
+    git clone -b v2.1.3 https://github.com/catppuccin/tmux.git "$REPO_DIR/.config/tmux/plugins/catppuccin/tmux"
+  else
+    echo "catppuccin already exist, skipping"
+  fi
 
-  git clone https://github.com/tmux-plugins/tpm "$REPO_DIR/.config/tmux/plugins/tpm"
+  # git clone https://github.com/tmux-plugins/tpm "$REPO_DIR/.config/tmux/plugins/tpm"
 
-  mkdir -p ~/.config/tmux/plugins/catppuccin
-  git clone -b v2.1.3 https://github.com/catppuccin/tmux.git "$REPO_DIR/.config/tmux/plugins/catppuccin/tmux"
+  # mkdir -p ~/.config/tmux/plugins/catppuccin
+  # git clone -b v2.1.3 https://github.com/catppuccin/tmux.git "$REPO_DIR/.config/tmux/plugins/catppuccin/tmux"
 
   ln -sfn "$REPO_DIR/.config/tmux" "$HOME/.config/tmux"
-  
-
-
 }
+
 
 syslink() {
 
-  ln -sf "$REPO_DIR/.zshrc" "$HOME/.zshrc"
+  ln -sfn "$REPO_DIR/.zshrc" "$HOME/.zshrc"
 
   for config in "$REPO_DIR/.config/"*; do
     name=$(basename "$config")
     ln -sfn "$config" "$CONFIG_DIR/$name"
   done
 }
+
 
 main() {
   install_packages
