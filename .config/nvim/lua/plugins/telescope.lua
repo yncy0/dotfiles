@@ -9,12 +9,12 @@ return {
 
       require('telescope').setup({
         defaults = {
+          cwd = vim.fn.getcwd(),
           file_ignore_patterns = {
             "node_modules",
             ".git/",
             ".nuxt",
           },
-          cwd = vim.fn.getcwd(),
         },
         pickers = {
           find_files = {

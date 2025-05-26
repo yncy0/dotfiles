@@ -20,21 +20,22 @@ return {
         ensure_installed = {
           "lua_ls",
           "eslint",
-          "prettier",
           "tailwindcss",
           "ts_ls",
           "vue_ls"
-        }
+        },
+        automatic_installation = true
       })
 
-      vim.lsp.enable('lua_ls')
-      vim.lsp.enable('eslint' )
-      vim.lsp.enable('gdscript' )
-      vim.lsp.enable('prettier')
-      vim.lsp.enable('tailwindcss' )
-      vim.lsp.enable('ts_ls' )
-      vim.lsp.enable('vue_ls' )
-
+        vim.lsp.enable({
+          'lua_ls',
+          'eslint',
+          'gdscript',
+          'prettier',
+          'tailwindcss',
+          'ts_ls',
+          'vue_ls'
+      })
 
       vim.lsp.config('lua_ls', {})
       vim.lsp.config('eslint', {})
