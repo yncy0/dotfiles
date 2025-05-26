@@ -30,15 +30,7 @@ return {
         automatic_installation = true,
       })
 
-      vim.lsp.enable({
-        "lua_ls",
-        "eslint",
-        "gdscript",
-        "prettier",
-        "tailwindcss",
-        "ts_ls",
-        "vue_ls",
-      })
+      vim.lsp.enable({'vue_ls', 'ts_ls'})
 
       vim.lsp.config("lua_ls", {
         capabilities = capabilities,
@@ -58,10 +50,13 @@ return {
       vim.lsp.config("ts_ls", {
         capabilities = capabilities,
       })
+
       vim.lsp.config("vue_ls", {
         capabilities = capabilities,
       })
-
+      vim.lsp.config("vuels", {
+        capabilities = capabilities,
+      })
       --      vim.api.nvim_create_autocmd("LspAttach", {
       --        group = vim.api.nvim_create_augroup("my.lsp", {}),
       --        callback = function(args)
@@ -80,6 +75,13 @@ return {
       --          end
       --        end,
       --      })
+      vim.diagnostic.config({
+        virtual_text = true, -- shows inline errors
+        signs = true,    -- signs in sign column
+        underline = true, -- underlines error lines
+        update_in_insert = false,
+        severity_sort = true,
+      })
 
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
