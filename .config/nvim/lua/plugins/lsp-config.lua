@@ -25,7 +25,6 @@ return {
           "eslint",
           "tailwindcss",
           "ts_ls",
-          "vue_ls",
         },
         automatic_installation = true,
       })
@@ -54,10 +53,7 @@ return {
       vim.lsp.config("vue_ls", {
         capabilities = capabilities,
       })
-      vim.lsp.config("vuels", {
-        capabilities = capabilities,
-      })
-      --      vim.api.nvim_create_autocmd("LspAttach", {
+     --      vim.api.nvim_create_autocmd("LspAttach", {
       --        group = vim.api.nvim_create_augroup("my.lsp", {}),
       --        callback = function(args)
       --          local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
