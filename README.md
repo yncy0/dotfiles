@@ -28,7 +28,7 @@ cd ~/.linux-dev-setup && chmod +x setup.sh && ./setup.sh
 ```
 
 ## ZSH
-
+This projects is centralized in **zsh**.
 If you wanted zsh to be your default shell, after installation run:
 
 ```
@@ -52,6 +52,7 @@ zsh
 - ✅ zsh && oh-my-zsh
 - ✅ neofetch || fastfetch
 - ✅ Neovim
+- ✅ Nerd Fonts
 
 <br>
 
@@ -60,7 +61,12 @@ zsh
 - ✅ catppuccin
 - ✅ telescope
 - ✅ treesitter
-- ✅ neo-tree
+
+## mini.nvim:
+- ✅ comments
+- ✅ completion
+- ✅ files
+- ✅ icons
 
 <br>
 
