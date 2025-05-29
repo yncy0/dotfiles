@@ -104,7 +104,7 @@ done
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
   echo "Installing OhMyZsh..."
 
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" 
 
   if [ $? -ne 0 ]; then
     echo "Failed to install OhMyZsh. Exiting."
