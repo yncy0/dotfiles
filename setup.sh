@@ -90,7 +90,7 @@ echo -e "Now you can officially say Neovim BTW\n"
 #===============================================================================
 
 ln -sfn "$REPO_DIR/.zshrc" "$HOME/.zshrc"
-ln -sfn "$REPO_DIR/.local/setup/fonts" "$HOME/.local/setup/fonts"
+ln -sfn "$REPO_DIR/.local/share" "$HOME/.local/share"
 
 #===============================================================================
 
