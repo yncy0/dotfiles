@@ -89,8 +89,8 @@ echo -e "Now you can officially say Neovim BTW\n"
 
 #===============================================================================
 
-ln -sfn "$REPO_DIR/.zshrc" "$HOME/.zshrc"
-ln -sfn "$REPO_DIR/.local/share" "$HOME/.local/share"
+ln -sf "$REPO_DIR/.zshrc" "$HOME/.zshrc"
+ln -sf "$REPO_DIR/.local/share" "$HOME/.local/share"
 
 #===============================================================================
 
