@@ -90,6 +90,7 @@ echo -e "Now you can officially say Neovim BTW\n"
 #===============================================================================
 
 ln -sf "$REPO_DIR/.zshrc" "$HOME/.zshrc"
+ln -sf "$REPO_DIR/.wezterm.lua" "$HOME/.wezterm.lua"
 ln -sf "$REPO_DIR/.local/share/fonts" "$HOME/.local/share/fonts"
 
 #===============================================================================
