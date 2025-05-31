@@ -21,5 +21,4 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="$PATH:/opt/nvim/"
 
 # Fastfetch
-fastfetch --logo
-fpath+=${ZDOTDIR:-~}/.zsh_functions
+fastfetch 
