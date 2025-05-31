@@ -12,7 +12,7 @@ if command -v apt &>/dev/null; then
   sudo apt update && sudo apt install -y \
     curl \
     wget \
-    neofetch \
+    fastfetch \
     libfuse2 \
     tmux \
     zsh
