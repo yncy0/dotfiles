@@ -15,6 +15,7 @@ if command -v apt &>/dev/null; then
     fastfetch \
     libfuse2 \
     tmux \
+    stow \
     zsh
 elif command -v dnf &>/dev/null; then
   echo "Fedora-based system detected. Installing dependencies using dnf..."
@@ -24,6 +25,7 @@ elif command -v dnf &>/dev/null; then
     fastfetch \
     fuse \
     tmux \
+    stow \
     zsh
 else
   echo "Unsupported package manager. Please install dependencies manually."
@@ -89,16 +91,9 @@ echo -e "Now you can officially say Neovim BTW\n"
 
 #===============================================================================
 
-ln -sf "$REPO_DIR/.zshrc" "$HOME/.zshrc"
-ln -sf "$REPO_DIR/.wezterm.lua" "$HOME/.wezterm.lua"
-ln -sf "$REPO_DIR/.local/share/fonts" "$HOME/.local/share/fonts"
+stow zsh
 
-#===============================================================================
-
-for config in "$REPO_DIR/.config/"*; do
-  name=$(basename "$config")
-  ln -sfn "$config" "$CONFIG_DIR/$name"
-done
+stow -t "$HOME/.config" .config
 
 #===============================================================================
 
