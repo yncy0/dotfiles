@@ -1,4 +1,4 @@
-# My personal development setup in Linux or in WSL
+# My personal development setup in Linux
 
 **This setup only includes** `apt` **and** `dnf` **packages** 
 
@@ -19,7 +19,7 @@ git clone https://github.com/Yncy0/wsl-dev-setup.git ~/.linux-dev-setup
 
 If using SSH:
 ```
-git clone git@github.com:Yncy0/linux-dev-setup.git ~/.linux-dev-setup
+git clone git@github.com:Yncy0/linux-dev-setup.git ~/.linux-dev-setup && cd 
 ```
 
 Run the script:
@@ -41,38 +41,47 @@ If oh-my-zsh not showing, run this line:
 zsh
 ```
 
-⚠️ You might want to restart your terminal to apply the changes
+⚠️ You might want to restart your terminal or reboot the system to apply the changes
 
 <br>
 
 ## Project Includes:
-- ✅ npm
-- ✅ pnpm
-- ✅ tmux
-- ✅ zsh && oh-my-zsh
-- ✅ neofetch || fastfetch
-- ✅ Neovim
-- ✅ Nerd Fonts
+- nvm
+- tmux
+- zsh && oh-my-zsh
+- fastfetch
+- Neovim
+- WezTerm
+
+<br>
+
+## Theme:
+- catpuccin
+
+<br>
+
+## NVM
+- Node.JS
+- npm
+- pnpm
 
 <br>
 
 ## Neovim:
-- ✅ lazy.nvim (package manager) 
-- ✅ catppuccin
-- ✅ telescope
-- ✅ treesitter
+- lazy.nvim 
+- telescope
+- treesitter
 
 ## mini.nvim:
-- ✅ comments
-- ✅ completion
-- ✅ files
-- ✅ icons
+- comments
+- completion
+- files
+- icons
 
 <br>
 
 ## TMUX:
-- ✅ catppuccin
-- ✅ tpm
+- tpm
 
 <br>
 
