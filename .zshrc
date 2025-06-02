@@ -12,7 +12,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Aliases
-alias dev="cd ~/.linux-dev-setup"
+alias dot="cd ~/.dotfiles"
 
 # Environment Variables
 export NVM_DIR="$HOME/.nvm"
