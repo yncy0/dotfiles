@@ -14,6 +14,7 @@ source $ZSH/oh-my-zsh.sh
 # Aliases
 alias dot="cd ~/dotfiles"
 alias up="sudo dnf update && sudo dnf upgrade"
+alias p="cd ~/Projects"
 
 # Environment Variables
 export NVM_DIR="$HOME/.nvm"

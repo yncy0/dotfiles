@@ -7,8 +7,6 @@ return {
       "neovim/nvim-lspconfig",
     },
     config = function()
-      local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
       require("mason").setup({
         ui = {
           icons = {
@@ -25,11 +23,12 @@ return {
           "eslint",
           "tailwindcss",
           "ts_ls",
+          "vue_ls"
         },
-        automatic_installation = true,
+        auto_install = true,
       })
 
-      vim.lsp.enable({'vue_ls', 'ts_ls'})
+      local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
       vim.lsp.config("lua_ls", {
         capabilities = capabilities,
@@ -48,12 +47,47 @@ return {
       })
       vim.lsp.config("ts_ls", {
         capabilities = capabilities,
+        plugins = {},
+        filetypes = {
+          "javascript",
+          "typescript",
+          "vue"
+        }
       })
 
       vim.lsp.config("vue_ls", {
         capabilities = capabilities,
+        init_options = {
+          vue = {
+            hybridMode = false,
+          },
+          filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
+
+          settings = {
+            typescript = {
+              inlayHints = {
+                enumMemberValues = {
+                  enabled = true,
+                },
+                functionLikeReturnTypes = {
+                  enabled = true,
+                },
+                propertyDeclarationTypes = {
+                  enabled = true,
+                },
+                parameterTypes = {
+                  enabled = true,
+                  suppressWhenArgumentMatchesName = true,
+                },
+                variableTypes = {
+                  enabled = true,
+                },
+              },
+            },
+          },
+        },
       })
-     --      vim.api.nvim_create_autocmd("LspAttach", {
+      --      vim.api.nvim_create_autocmd("LspAttach", {
       --        group = vim.api.nvim_create_augroup("my.lsp", {}),
       --        callback = function(args)
       --          local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
