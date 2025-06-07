@@ -12,11 +12,11 @@ function module.apply_to_config(config)
   config.initial_cols = 120
   config.initial_rows = 28
 
-  config.color_scheme = "Catppuccin Mocha"
+  config.color_scheme = "Catppuccin Latte"
   config.font = wezterm.font 'JetBrains Mono'
   config.enable_kitty_graphics = true
 
-  config.window_background_opacity = 0.9
+  config.window_background_opacity = 0.8
 end
 
 return module
