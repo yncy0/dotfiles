@@ -50,7 +50,9 @@ return {
         plugins = {},
         filetypes = {
           "javascript",
+          "javascriptreact",
           "typescript",
+          "typescriptreact",
           "vue"
         }
       })
@@ -107,8 +109,8 @@ return {
       --      })
       vim.diagnostic.config({
         virtual_text = true, -- shows inline errors
-        signs = true,    -- signs in sign column
-        underline = true, -- underlines error lines
+        signs = true,        -- signs in sign column
+        underline = true,    -- underlines error lines
         update_in_insert = false,
         severity_sort = true,
       })
