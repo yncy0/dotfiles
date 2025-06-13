@@ -1,5 +1,7 @@
 # My personal development setup in Linux
 
+![image](screenshot.png)
+
 **This setup only includes** `apt` **and** `dnf` **packages** 
 
 <br>
@@ -56,7 +58,9 @@ zsh
 <br>
 
 ## Theme:
+### You can choose different flavors, themes applied at Neovim, TMUX, and WezTerm
 - catpuccin
+- gruvbox
 
 <br>
 
