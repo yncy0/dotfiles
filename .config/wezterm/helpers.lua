@@ -13,11 +13,12 @@ function module.apply_to_config(config)
   config.initial_cols = 120
   config.initial_rows = 28
 
-  config.color_scheme = "Catppuccin Latte"
+  -- config.color_scheme = "Catppuccin Latte"
+  config.color_scheme = "Gruvbox light, hard (base16)"
   config.font = wezterm.font('JetBrains Mono', { weight = 'Bold' })
   config.enable_kitty_graphics = true
 
-  config.window_background_opacity = 0.65
+  config.window_background_opacity = 0.55
   config.kde_window_background_blur = true
 
   -- Key Tables
@@ -27,7 +28,7 @@ function module.apply_to_config(config)
     {
       key = 'm',
       mods = "LEADER",
-      action = "ToggleFullScreen"
+      action = act.ToggleFullScreen
     },
     {
       key = "n",
