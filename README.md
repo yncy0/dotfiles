@@ -53,7 +53,7 @@ zsh
 - zsh && oh-my-zsh
 - fastfetch
 - Neovim
-- WezTerm
+- Kitty && WezTerm
 
 <br>
 
