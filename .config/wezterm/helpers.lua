@@ -18,7 +18,7 @@ function module.apply_to_config(config)
   config.font = wezterm.font('JetBrains Mono', { weight = 'Bold' })
   config.enable_kitty_graphics = true
 
-  config.window_background_opacity = 0.55
+  config.window_background_opacity = 0.9
   config.kde_window_background_blur = true
 
   -- Key Tables
