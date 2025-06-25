@@ -15,6 +15,8 @@ source $ZSH/oh-my-zsh.sh
 alias dot="cd ~/dotfiles"
 alias up="sudo dnf update && sudo dnf upgrade"
 alias p="cd ~/Projects"
+alias vim="nvim"
+alias vi="vim"
 
 # Environment Variables
 export NVM_DIR="$HOME/.nvm"
@@ -23,4 +25,6 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="$PATH:/opt/nvim/"
 
 # Fastfetch
-fastfetch 
+if [ ! "$TMUX" ]; then
+  fastfetch 
+fi
