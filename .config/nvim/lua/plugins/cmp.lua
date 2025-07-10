@@ -1,7 +1,7 @@
 return {
   {
     'saghen/blink.cmp',
-    lazy = false,
+    lazy = true,
     priority = 1000,
     dependencies = { 'rafamadriz/friendly-snippets' },
     version = '1.*',
@@ -27,7 +27,7 @@ return {
 
   {
     "L3MON4D3/LuaSnip",
-    lazy = false,
+    lazy = true,
     dependencies = {
       "saadparwaiz1/cmp_luasnip",
       "rafamadriz/friendly-snippets",
@@ -38,7 +38,7 @@ return {
   },
   {
     "hrsh7th/nvim-cmp",
-    lazy = false,
+    lazy = true,
     dependencies = {
       "hrsh7th/cmp-nvim-lsp",
     },
