@@ -1,33 +1,33 @@
 return {
   {
-    'saghen/blink.cmp',
-    lazy = true,
+    "saghen/blink.cmp",
+    enabled = false,
+    lazy = false,
     priority = 1000,
-    dependencies = { 'rafamadriz/friendly-snippets' },
-    version = '1.*',
-    ---@module 'blink.cmp'
-    ---@type blink.cmp.Config
+    dependencies = {"rafamadriz/friendly-snippets", "L3MON4D3/LuaSnip" },
+    version = "1.*",
     opts = {
-      keymap = { preset = 'default' },
+      keymap = { preset = "default" },
 
       appearance = {
-        nerd_font_variant = 'mono'
+        nerd_font_variant = "mono",
       },
 
       completion = { documentation = { auto_show = false } },
 
       sources = {
-        default = { 'lsp', 'path', 'snippets', 'buffer' },
+        default = { "lsp", "path", "snippets", "buffer" },
       },
 
-      fuzzy = { implementation = "prefer_rust_with_warning" }
+      snippets = {preset = 'luasnip'}
     },
-    opts_extend = { "sources.default" }
+    signature = { enabled = true },
+    opts_extend = { "sources.default" },
   },
 
   {
     "L3MON4D3/LuaSnip",
-    lazy = true,
+    enabled = true,
     dependencies = {
       "saadparwaiz1/cmp_luasnip",
       "rafamadriz/friendly-snippets",
@@ -38,7 +38,7 @@ return {
   },
   {
     "hrsh7th/nvim-cmp",
-    lazy = true,
+    enabled = true,
     dependencies = {
       "hrsh7th/cmp-nvim-lsp",
     },

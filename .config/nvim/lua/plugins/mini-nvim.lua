@@ -27,6 +27,7 @@ return {
   -- mini.completion
   {
     "echasnovski/mini.completion",
+    lazy = true,
     version = false,
     config = function()
       require("mini.completion").setup()
