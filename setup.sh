@@ -2,7 +2,7 @@
 
 set -e
 
-REPO_DIR="$HOME/dotfiles"
+REPO_DIR="$HOME/.dotfiles"
 CONFIG_DIR="$HOME/.config"
 
 #===============================================================================
@@ -59,7 +59,7 @@ pnpm -v
 
 stow zsh
 
-stow -t "$HOME/.config" .config
+stow -t CONFIG_DIR .config
 
 #===============================================================================
 
