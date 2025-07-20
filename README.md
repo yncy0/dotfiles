@@ -57,5 +57,3 @@ You can easily **stow** necessary files.
 ├── setup.sh
 └── zsh
 ```
-
-*Please if you have problems, contact me on my GitHub account: Yncy0, or open an issue on this repository. Thanks!*
