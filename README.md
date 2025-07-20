@@ -9,7 +9,14 @@ Please fork this repository if you want to customize it on your own.
 ## Prerequisites
 
 - [zsh](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
-- libfuse library (depends on the distro)
+- fuse/libfuse library
+- stow
+- curl
+
+If you are on **WSL**, it is pretty much likely that you don't have ~/.config file yet, run this:
+```
+mkdir ~/.config
+```
 
 ## Installation
 
@@ -52,6 +59,7 @@ You can easily **stow** necessary files.
 │   ├── tmux
 │   └── wezterm
 ├── .gitignore
+├── bash
 ├── README.md
 ├── screenshot.png
 ├── setup.sh
