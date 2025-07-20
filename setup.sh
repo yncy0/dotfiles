@@ -15,15 +15,6 @@ echo -e "░▀▀░░▀▀▀░░▀░░▀░░░▀▀▀░▀▀�
 
 #===============================================================================
 
-rm ~/.bashrc
-rm ~/.zshrc
-
-
-stow zsh
-stow bash
-
-#===============================================================================
-
 echo "Installing Neovim..."
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage
 chmod u+x nvim-linux-x86_64.appimage
@@ -64,7 +55,15 @@ pnpm -v
 
 #===============================================================================
 
+stow zsh --adopt
+stow bash --adopt
+
 stow -t "$CONFIG_DIR" .config
+
+git reset --hard
+
+stow zsh
+stow bash
 
 #===============================================================================
 
