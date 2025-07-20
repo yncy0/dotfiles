@@ -2,47 +2,35 @@
 
 set -e
 
-REPO_DIR="$HOME/.linux-dev-setup"
+REPO_DIR="$HOME/dotfiles"
 CONFIG_DIR="$HOME/.config"
 
 #===============================================================================
 
-if command -v apt &>/dev/null; then
-  echo "Debian-based system detected. Installing dependencies using apt..."
-  sudo apt update && sudo apt install -y \
-    curl \
-    wget \
-    fastfetch \
-    libfuse2 \
-    tmux \
-    stow \
-    zsh
-elif command -v dnf &>/dev/null; then
-  echo "Fedora-based system detected. Installing dependencies using dnf..."
-  sudo dnf install -y \
-    curl \
-    wget \
-    fastfetch \
-    fuse \
-    tmux \
-    stow \
-    zsh
-else
-  echo "Unsupported package manager. Please install dependencies manually."
-  exit 1
-fi
 
-echo -e "\n"
+echo -e "░█▀▄░█▀█░▀█▀░█▀▀░▀█▀░█░░░█▀▀░█▀▀"  
+echo -e "░█░█░█░█░░█░░█▀▀░░█░░█░░░█▀▀░▀▀█"  
+echo -e "░▀▀░░▀▀▀░░▀░░▀░░░▀▀▀░▀▀▀░▀▀▀░▀▀▀"  
+
 
 #===============================================================================
 
-echo -e "  ███╗   ██╗ ██████╗ ██████╗ ███████╗     ██╗███████╗"
-echo -e "  ████╗  ██║██╔═══██╗██╔══██╗██╔════╝     ██║██╔════╝"
-echo -e "  ██╔██╗ ██║██║   ██║██║  ██║█████╗       ██║███████╗"
-echo -e "  ██║╚██╗██║██║   ██║██║  ██║██╔══╝  ██   ██║╚════██║"
-echo -e "  ██║ ╚████║╚██████╔╝██████╔╝███████╗╚█████╔╝███████║"
-echo -e "  ╚═╝  ╚═══╝ ╚═════╝ ╚═════╝ ╚══════╝ ╚════╝ ╚══════╝"
+#===============================================================================
 
+echo "Installing Neovim..."
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage
+chmod u+x nvim-linux-x86_64.appimage
+./nvim-linux-x86_64.appimage
+
+echo "Exposing Neovim Globally..."
+sudo mkdir -p /opt/nvim
+sudo mv nvim-linux-x86_64.appimage /opt/nvim/nvim
+
+echo "Sourcing Neovim..."
+
+echo -e "Now you can officially say Neovim BTW\n"
+
+#===============================================================================
 
 echo "Installing Node packages..."
 echo "Installing NVM..."
@@ -66,28 +54,6 @@ corepack enable pnpm
 
 echo -e "Verifying pnpm...\n"
 pnpm -v
-
-#===============================================================================
-
-echo -e "███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗"
-echo -e "████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║"
-echo -e "██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║"
-echo -e "██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║"
-echo -e "██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║"
-echo -e "╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝"
-
-echo "Installing Neovim..."
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage
-chmod u+x nvim-linux-x86_64.appimage
-./nvim-linux-x86_64.appimage
-
-echo "Exposing Neovim Globally..."
-sudo mkdir -p /opt/nvim
-sudo mv nvim-linux-x86_64.appimage /opt/nvim/nvim
-
-echo "Sourcing Neovim..."
-
-echo -e "Now you can officially say Neovim BTW\n"
 
 #===============================================================================
 
