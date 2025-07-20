@@ -15,17 +15,17 @@ Please fork this repository if you want to customize it on your own.
 
 Clone this repository:
 ```
-git clone https://github.com/Yncy0/wsl-dev-setup.git ~/.linux-dev-setup
+git clone https://github.com/Yncy0/dotfiles.git ~/.dotfiles
 ```
 
 If using SSH:
 ```
-git clone git@github.com:Yncy0/linux-dev-setup.git ~/.linux-dev-setup && cd
+git clone git@github.com:Yncy0/dotfiles ~/.dotfiles && cd
 ```
 
 Run the script:
 ```
-cd ~/.linux-dev-setup && chmod +x setup.sh && ./setup.sh
+cd ~/.dotfiles chmod +x setup.sh && ./setup.sh
 ```
 
 ## ZSH
