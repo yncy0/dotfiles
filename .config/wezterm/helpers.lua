@@ -15,7 +15,7 @@ function module.apply_to_config(config)
 
   -- config.color_scheme = "Catppuccin Latte"
   config.color_scheme = "Gruvbox light, hard (base16)"
-  config.font = wezterm.font('JetBrains Mono', { weight = 'Bold' })
+  config.font = wezterm.font 'JetBrains Mono'
   config.enable_kitty_graphics = true
 
   config.window_background_opacity = 0.9
