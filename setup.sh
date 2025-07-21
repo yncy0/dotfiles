@@ -61,22 +61,3 @@ stow bash --adopt
 stow -t "$CONFIG_DIR" .config
 
 git restore .
-
-stow zsh
-stow bash
-
-#===============================================================================
-
-if [ ! -d "$HOME/.oh-my-zsh" ]; then
-  echo "Installing OhMyZsh..."
-
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" 
-
-  if [ $? -ne 0 ]; then
-    echo "Failed to install OhMyZsh. Exiting."
-    exit 1
-  fi
-else
-  echo "OhMyZsh is already installed."
-fi
-
