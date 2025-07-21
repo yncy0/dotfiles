@@ -60,7 +60,7 @@ stow bash --adopt
 
 stow -t "$CONFIG_DIR" .config
 
-git reset --hard
+git restore .
 
 stow zsh
 stow bash
