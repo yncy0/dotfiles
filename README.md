@@ -8,7 +8,7 @@ Please fork this repository if you want to customize it on your own.
 
 ## Prerequisites
 
-- [zsh](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
+- [zsh & oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
 - fuse/libfuse library
 - stow
 - curl
