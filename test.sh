@@ -6,8 +6,8 @@ NEOVIM_DIR="/opt/nvim"
 
 echo -e "Running test simulation\n"
 
+echo "Installing Neovim..."
 if [ ! -d "$NEOVIM_DIR" ]; then
-  echo "Installing Neovim..."
   curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage
   chmod u+x nvim-linux-x86_64.appimage
   ./nvim-linux-x86_64.appimage
@@ -23,8 +23,8 @@ else
   echo "Neovim already exist"
 fi
 
+echo "Installing Node packages..."
 if [ ! -d "$NVM_DIR" ]; then
-  echo "Installing Node packages..."
   echo "Installing NVM..."
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 
