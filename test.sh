@@ -1,20 +1,10 @@
 #!/bin/bash
 
-set -e
-
 CONFIG_DIR="$HOME/.config"
 DOTFILES_DIR="$HOME/.dotfiles"
 NEOVIM_DIR="/opt/nvim"
 
-#===============================================================================
-
-
-echo -e "░█▀▄░█▀█░▀█▀░█▀▀░▀█▀░█░░░█▀▀░█▀▀"  
-echo -e "░█░█░█░█░░█░░█▀▀░░█░░█░░░█▀▀░▀▀█"  
-echo -e "░▀▀░░▀▀▀░░▀░░▀░░░▀▀▀░▀▀▀░▀▀▀░▀▀▀"  
-
-
-#===============================================================================
+echo -e "Running test simulation\n"
 
 echo "Installing Neovim..."
 if [ ! -d "$NEOVIM_DIR" ]; then
@@ -29,11 +19,9 @@ if [ ! -d "$NEOVIM_DIR" ]; then
   echo "Sourcing Neovim..."
 
   echo -e "Now you can officially say Neovim BTW\n"
-else
-  echo -e "You are using Neovim BTW\n"
+else 
+  echo "Neovim already exist"
 fi
-
-#===============================================================================
 
 echo "Installing Node packages..."
 if [ ! -d "$NVM_DIR" ]; then
@@ -59,12 +47,7 @@ if [ ! -d "$NVM_DIR" ]; then
   echo -e "Verifying pnpm...\n"
   pnpm -v
 else
-  echo -e "Node Packages already installed\n"
-#===============================================================================
+  echo "NVM already exist"
+fi
 
-stow zsh --adopt
-stow bash --adopt
-
-stow -t "$CONFIG_DIR" .config
-
-git restore .
+echo -e "\nTesting Ended"
