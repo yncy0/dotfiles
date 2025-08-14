@@ -1,10 +1,11 @@
+-- Custom Vim configuration
 vim.cmd("set expandtab")
 vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 
-vim.g.mapleader = " "
-
+-- lazy.nvim package manager
+-- @see https://github.com/folke/lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   local lazyrepo = "https://github.com/folke/lazy.nvim.git"
@@ -21,5 +22,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-
+-- Calls "/nvim/lua/plugins" directory
+-- @param {string} calls the lazy package manager
+-- @param {string} calls all the plugins withing "/nvim/lua/plugins/*" directory
 require("lazy").setup("plugins")

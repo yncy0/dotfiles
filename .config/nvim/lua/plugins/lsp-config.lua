@@ -1,3 +1,12 @@
+-- An essentail plugins that allows autocompletion and more 
+-- For organizing lsp's:
+-- @see https://github.com/mason-org/mason-lspconfig.nvim
+-- @see https://github.com/mason-org/mason.nvim
+-- For lsp's configuration:
+-- @see https://github.com/neovim/nvim-lspconfig
+--
+-- @return {}
+
 return {
   {
     "mason-org/mason-lspconfig.nvim",
@@ -33,10 +42,8 @@ return {
   },
   {
     "neovim/nvim-lspconfig",
-    -- dependencies = { "saghen/blink.cmp" },
     config = function()
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
-      -- local capabilities = require("blink.cmp").get_lsp_capabilities()
 
       vim.lsp.config("lua_ls", {
         capabilities = capabilities,
@@ -143,11 +150,13 @@ return {
           end
         end,
       }
+      -- Configuration exclusively for Vue.js
       -- nvim 0.11 or above
       vim.lsp.config("vtsls", vtsls_config)
       vim.lsp.config("vue_ls", vue_ls_config)
       vim.lsp.enable({ "vtsls", "vue_ls" })
 
+      -- Enabling lsp
       vim.lsp.enable("cssls")
       vim.lsp.enable("eslint")
       vim.lsp.enable("eslint_d")
@@ -178,6 +187,7 @@ return {
         severity_sort = true,
       })
 
+      -- Custome keybindings
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
       vim.keymap.set({ "n" }, "<leader>ca", vim.lsp.buf.code_action, {})

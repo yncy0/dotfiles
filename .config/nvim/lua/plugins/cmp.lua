@@ -1,30 +1,10 @@
+-- Plugins for auto-complete/completion
+-- @see https://github.com/L3MON4D3/LuaSnip
+-- @see https://github.com/hrsh7th/nvim-cmp
+-- @see https://github.com/hrsh7th/cmp-nvim-lsp
+-- @return {}
+
 return {
-  {
-    "saghen/blink.cmp",
-    enabled = false,
-    lazy = false,
-    priority = 1000,
-    dependencies = {"rafamadriz/friendly-snippets", "L3MON4D3/LuaSnip" },
-    version = "1.*",
-    opts = {
-      keymap = { preset = "default" },
-
-      appearance = {
-        nerd_font_variant = "mono",
-      },
-
-      completion = { documentation = { auto_show = false } },
-
-      sources = {
-        default = { "lsp", "path", "snippets", "buffer" },
-      },
-
-      snippets = {preset = 'luasnip'}
-    },
-    signature = { enabled = true },
-    opts_extend = { "sources.default" },
-  },
-
   {
     "L3MON4D3/LuaSnip",
     enabled = true,

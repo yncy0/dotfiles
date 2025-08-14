@@ -1,3 +1,8 @@
+-- A collection of plugins in Neovim
+-- @see https://github.com/echasnovski/mini.nvim
+--
+-- @return {}
+
 return {
   -- mini.nvim
   {

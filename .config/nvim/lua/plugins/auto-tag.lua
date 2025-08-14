@@ -1,3 +1,8 @@
+-- Automatically enclose tag such as "{}", "()", "[]", or <html></html>
+-- @see https://github.com/windwp/nvim-ts-autotag
+--
+-- @return {}
+
 return {
   {
     'windwp/nvim-ts-autotag',

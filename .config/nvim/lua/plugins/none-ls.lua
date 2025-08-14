@@ -1,3 +1,8 @@
+-- Formerly known as null-ls, it provides formatters and linters plugin
+-- @see https://github.com/nvimtools/none-ls.nvim
+-- @see https://github.com/nvimtools/none-ls-extras.nvim
+--
+-- @return {}
 return {
 	"nvimtools/none-ls.nvim",
   dependencies = {
@@ -6,6 +11,7 @@ return {
 	config = function()
 		local null_ls = require("null-ls")
 
+    -- Sets up formatter and linters that you installed
 		null_ls.setup({
 			sources = {
 				null_ls.builtins.formatting.stylua,
