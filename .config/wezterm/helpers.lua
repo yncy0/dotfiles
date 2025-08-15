@@ -13,11 +13,13 @@ function module.apply_to_config(config)
 	config.initial_cols = 120
 	config.initial_rows = 28
 
+  -- You can uncomment if you prefer other theme
 	-- config.color_scheme = "Catppuccin Latte"
 	config.color_scheme = "Gruvbox light, hard (base16)"
 	config.font = wezterm.font("JetBrains Mono")
 	config.enable_kitty_graphics = true
-
+  
+  -- Options for window background
 	config.window_background_opacity = 0.9
 	config.kde_window_background_blur = true
 
@@ -34,8 +36,8 @@ function module.apply_to_config(config)
 		border_bottom_color = "purple",
 		border_top_color = "purple",
 	}
-	-- Key Tables
 
+	-- Key Tables
 	config.leader = { key = "a", mods = "CTRL", timeout_ms = 1000 }
 	config.keys = {
 		{

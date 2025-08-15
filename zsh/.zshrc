@@ -13,8 +13,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Aliases
 alias dot="cd ~/.dotfiles"
-alias vim="nvim"
-alias vi="vim"
 
 # Environment Variables
 export NVM_DIR="$HOME/.nvm"

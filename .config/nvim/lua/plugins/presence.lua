@@ -1,3 +1,8 @@
+-- "I use Neovime btw!" but on Discord
+-- @see https://github.com/andweeb/presence.nvim
+--
+-- @return {}
+
 return {
   {
     "andweeb/presence.nvim",
