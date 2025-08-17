@@ -13,6 +13,7 @@ return {
 	{
 		"echasnovski/mini.files",
 		version = false,
+    enabled = false,
 		config = function()
 			require("mini.files").setup()
 
