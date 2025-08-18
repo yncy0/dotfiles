@@ -35,12 +35,4 @@ return {
 		"echasnovski/mini.comment",
 		version = false,
 	},
-	--mini.pairs
-	{
-		"echasnovski/mini.pairs",
-		version = false,
-		config = function()
-			require("mini.pairs").setup()
-		end,
-	},
 }
