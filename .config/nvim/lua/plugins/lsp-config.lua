@@ -63,7 +63,7 @@ return {
       vim.lsp.config("markdownlint", {
         capabilities = capabilities,
       })
-      vim.lsp.config("prettierd", {
+      vim.lsp.config("prettier", {
         capabilities = capabilities,
       })
       vim.lsp.config("pgformatter", {
@@ -168,7 +168,7 @@ return {
       vim.lsp.enable("omnisharp")
       vim.lsp.enable("pgformatter")
       vim.lsp.enable("postgrestools")
-      vim.lsp.enable("prettierd")
+      vim.lsp.enable("prettier")
       vim.lsp.enable("sqlls")
       vim.lsp.enable("stylua")
       vim.lsp.enable("tailwindcss")
