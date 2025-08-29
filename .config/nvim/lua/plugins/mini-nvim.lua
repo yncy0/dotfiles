@@ -1,17 +1,17 @@
 -- A collection of plugins in Neovim
--- @see https://github.com/echasnovski/mini.nvim
+-- @see https://github.com/nvim-mini/mini.nvim
 --
 -- @return {}
 
 return {
   -- mini.nvim
   {
-    "echasnovski/mini.nvim",
+    "nvim-mini/mini.nvim",
     version = false,
   },
   -- mini.files
   {
-    "echasnovski/mini.files",
+    "nvim-mini/mini.files",
     version = false,
     enabled = false,
     config = function()
@@ -22,7 +22,7 @@ return {
   },
   -- mini.icons
   {
-    "echasnovski/mini.icons",
+    "nvim-mini/mini.icons",
     version = false,
     config = function()
       require("mini.icons").setup({
@@ -32,12 +32,12 @@ return {
   },
   --mini.comments
   {
-    "echasnovski/mini.comment",
+    "nvim-mini/mini.comment",
     version = false,
   },
   --mini.pairs
   {
-    "echasnovski/mini.pairs",
+    "nvim-mini/mini.pairs",
     version = false,
     config = function ()
       require("mini.pairs").setup()
