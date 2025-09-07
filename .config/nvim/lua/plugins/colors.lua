@@ -21,13 +21,13 @@ return {
   {
     "catppuccin/nvim",
     name = "catppuccin",
-    lazy = true,
+    lazy = false,
     priority = 1000,
     config = function()
       require("catppuccin").setup({
-        flavour = "latte",
+        flavour = "mocha",
         transparent_background = true,
-        background = { light = "latte" },
+        background = { light = "latte", dark = "mocha" },
       })
 
       vim.cmd.colorscheme("catppuccin")
@@ -36,6 +36,7 @@ return {
   {
     "ellisonleao/gruvbox.nvim",
     lazy = false,
+    enabled = false,
     priority = 1000,
     config = function()
       require("gruvbox").setup({
