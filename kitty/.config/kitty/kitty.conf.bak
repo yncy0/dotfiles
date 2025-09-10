@@ -1,0 +1,13 @@
+# BEGIN_KITTY_THEME
+# Catppuccin-Latte
+include current-theme.conf
+# END_KITTY_THEME
+# font_family      Fira Code Regular
+
+
+# BEGIN_KITTY_FONTS
+font_family      family="FiraCode Nerd Font"
+bold_font        auto
+italic_font      auto
+bold_italic_font auto
+# END_KITTY_FONTS
