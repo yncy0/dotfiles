@@ -65,6 +65,9 @@ else
 stow zsh --adopt
 stow bash --adopt
 
-stow -t "$CONFIG_DIR" .config
+stow nvim
+stow fastfetch
+stow tmux
+stow wezterm
 
 git restore .
