@@ -22,7 +22,7 @@ export PATH="$PATH:/opt/nvim/"
 
 # Fastfetch
 if [ ! "$TMUX" ]; then
-  fastfetch --logo "~/.dotfiles/fastfetch/.config/fastfetch/logo/gruv-blue-sprite.png" --logo-type iterm --logo-width "32" --logo-padding-top 1
+  fastfetch --logo "~/.dotfiles/fastfetch/.config/fastfetch/logo/gruv-blue-sprite.png" --logo-type kitty --logo-width "32" --logo-padding-top 1
 else
   fastfetch
 fi
