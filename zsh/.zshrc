@@ -20,13 +20,6 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH="$PATH:/opt/nvim/"
 
-# Fastfetch
-if [ ! "$TMUX" ]; then
-  fastfetch --logo "~/.dotfiles/fastfetch/.config/fastfetch/logo/gruv-blue-sprite.png" --logo-type kitty --logo-width "32" --logo-padding-top 1
-else
-  fastfetch
-fi
-
 # pnpm
 export PNPM_HOME="/home/nyanya/.local/share/pnpm"
 case ":$PATH:" in
@@ -34,3 +27,5 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+fastfetch

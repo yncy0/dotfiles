@@ -6,13 +6,6 @@
 -- @example
 -- {
 --   "my-theme-plugin"
---   lazy = true
--- }
---
--- OR
--- @example
--- {
---   "my-theme-plugin"
 --   enabled = false
 -- }
 
@@ -22,6 +15,7 @@ return {
     "catppuccin/nvim",
     name = "catppuccin",
     lazy = false,
+    enabled = false,
     priority = 1000,
     config = function()
       require("catppuccin").setup({
@@ -46,4 +40,20 @@ return {
       vim.cmd("colorscheme gruvbox")
     end,
   },
+  -- lua/plugins/rose-pine.lua
+  {
+    "rose-pine/neovim",
+    name = "rose-pine",
+    config = function()
+      require("rose-pine").setup({
+        variant = "dawn",
+        dark_variant = "dawn",
+        styles = {
+          transparency = true
+        }
+      })
+
+      vim.cmd("colorscheme rose-pine")
+    end
+  }
 }
