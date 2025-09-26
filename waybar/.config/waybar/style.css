@@ -14,7 +14,7 @@
 window#waybar {
   background-color: transparent;
   /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
-  color: #ffffff;
+  color: @text;
   transition-property: background-color;
   transition-duration: 0.5s;
   margin: 10rem;
@@ -118,7 +118,7 @@ button:hover {
 #battery.charging,
 #battery.plugged {
   color: #faf4ed;
-  background-color: #286983;
+  background-color: @love;
 }
 
 @keyframes blink {
