@@ -1,11 +1,3 @@
-
-         _     
- _______| |__  
-|_  / __| '_ \ 
- / /\__ \ | | |
-/___|___/_| |_|
-
-
 # zsh
 
 Modern shell, it's just simple and awesome

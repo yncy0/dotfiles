@@ -1,13 +1,3 @@
-
-
- _  ___ _   _         
-| |/ (_) |_| |_ _   _ 
-| ' /| | __| __| | | |
-| . \| | |_| |_| |_| |
-|_|\_\_|\__|\__|\__, |
-                |___/ 
-
-
 # Kitty
 
 Probably one of the best terminal out there. But I don't understand why I like Alacritty more.
