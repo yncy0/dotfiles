@@ -48,3 +48,6 @@ case ":$PATH:" in
 esac
 # pnpm end
 . "$HOME/.cargo/env"
+
+# Set up fzf key bindings and fuzzy completion
+eval "$(fzf --bash)"

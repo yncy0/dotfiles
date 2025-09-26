@@ -1,10 +1,18 @@
+
+
+     _       _    __ _ _           
+  __| | ___ | |_ / _(_) | ___  ___ 
+ / _` |/ _ \| __| |_| | |/ _ \/ __|
+| (_| | (_) | |_|  _| | |  __/\__ \
+ \__,_|\___/ \__|_| |_|_|\___||___/
+
+
+
 # My personal dotfiles on Linux
 
-![image](screenshot.png)
+![image](sample.png)
 
-## ⚠️ WARNING
-
-Please fork this repository if you want to customize it on your own.
+> ⚠️ WARNING: Please fork this repository if you want to customize it on your own.
 
 ## Prerequisites
 
@@ -17,6 +25,8 @@ If you are on **WSL**, it is pretty much likely that you don't have ~/.config fi
 ```
 mkdir ~/.config
 ```
+
+> ⚠️ WARNING: setup.sh is not completed yet
 
 ## Installation
 
@@ -35,33 +45,17 @@ Run the script:
 cd ~/.dotfiles chmod +x setup.sh && ./setup.sh
 ```
 
-## ZSH
-If you wanted zsh to be your default shell, or just in case it doesn't switch automatically, just run:
+## Primarly Used Packages
 
-```
-source ~/.zshrc
-chsh -s $(which zsh)
-```
+- 📁[alacritty](https://github.com/yncy0/dotfiles/tree/main/alacritty)         - for terminal
+- 📁[fastfetch](https://github.com/yncy0/dotfiles/tree/main/fastfetch)         - for displaying your Linux
+- 📁[hypr](https://github.com/yncy0/dotfiles/tree/main/hypr)                   - for window tiling manager
+- 📁[nvim](https://github.com/yncy0/dotfiles/tree/main/nvim)                   - for the best code text editor
+- 📁[swaync](https://github.com/yncy0/dotfiles/tree/main/swaync)               - for notifications
+- 📁[tmux](https://github.com/yncy0/dotfiles/tree/main/tmux)                   - for terminal emulator
+- 📁[wallpapers](https://github.com/yncy0/dotfiles/tree/main/wallpapers)       - for wallpapers
+- 📁[waybar](https://github.com/yncy0/dotfiles/tree/main/waybar)               - for the status bar
+- 📁[wofi](https://github.com/yncy0/dotfiles/tree/main/wofi)                   - for app launcher
+- 📁[zsh](https://github.com/yncy0/dotfiles/tree/main/zsh)                     - for my default shell
 
-If oh-my-zsh not showing, run this line:
-```
-zsh
-```
-⚠️ *You might want to restart your terminal or reboot the system to apply the changes.*
-
-
-## Project Structure
-You can easily **stow** necessary files.
-```
-├── .config
-│   ├── fastfetch
-│   ├── nvim
-│   ├── tmux
-│   └── wezterm
-├── .gitignore
-├── bash
-├── README.md
-├── screenshot.png
-├── setup.sh
-└── zsh
-```
+> Those that I didn't mentioned, I'm not using them anymore.
