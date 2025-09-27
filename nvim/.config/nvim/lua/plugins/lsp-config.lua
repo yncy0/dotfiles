@@ -29,6 +29,7 @@ return {
         ensure_installed = {
           "lua_ls",
           "eslint",
+          "gopls",
           "jsonls",
           "omnisharp",
           "tailwindcss",
@@ -55,6 +56,9 @@ return {
         capabilities = capabilities,
       })
       vim.lsp.config("gdscript", {
+        capabilities = capabilities,
+      })
+      vim.lsp.config("gopls", {
         capabilities = capabilities,
       })
       vim.lsp.config("markdown-oxide", {
@@ -160,6 +164,7 @@ return {
       vim.lsp.enable("cssls")
       vim.lsp.enable("eslint")
       vim.lsp.enable("eslint_d")
+      vim.lsp.enable("gopls")
       vim.lsp.enable("html")
       vim.lsp.enable("jsonls")
       vim.lsp.enable("lua_ls")
