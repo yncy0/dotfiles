@@ -21,7 +21,7 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="$PATH:/opt/nvim/"
 
 # pnpm
-export PNPM_HOME="/home/nyanya/.local/share/pnpm"
+export PNPM_HOME="$HOME/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
@@ -31,4 +31,9 @@ esac
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 
+#golang
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$(go env GOPATH)/bin
+
+eval "$(direnv hook zsh)"
 fastfetch

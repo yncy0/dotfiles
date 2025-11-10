@@ -30,10 +30,10 @@ export NVM_DIR="$HOME/.nvm"
 
 # Aliases
 alias dot="cd ~/.dotfiles"
-alias vim="nvim"
-alias vi="vim"
 
 export PATH="$PATH:/opt/nvim/"
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$(go env GOPATH)/bin
 
 # Fastfetch
 if [ ! "$TMUX" ]; then
@@ -41,7 +41,7 @@ if [ ! "$TMUX" ]; then
 fi
 
 # pnpm
-export PNPM_HOME="/home/nyanya/.local/share/pnpm"
+export PNPM_HOME="$HOME/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
@@ -51,3 +51,4 @@ esac
 
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --bash)"
+eval "$(direnv hook bash)"

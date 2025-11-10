@@ -21,9 +21,7 @@
     "modules-right": [
         "pulseaudio",
         "network",
-        "cpu",
         "memory",
-        "temperature",
         "battery"
     ],
     // Modules configuration
